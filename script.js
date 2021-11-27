@@ -5,14 +5,14 @@ const todoList = document.querySelector(".todoList");
 const deleteAllBtn = document.querySelector(".footer button");
 
 // onkeyup event
-inputBox.onkeypress = ()=>{
-  let userEnteredValue = inputBox.value; //getting user entered value
-  if(userEnteredValue.trim() != 0){ //if the user value isn't only spaces
-    addBtn.classList.add("active"); //active the add button
-  }else{
-    addBtn.classList.remove("active"); //unactive the add button
-  }
-}
+// inputBox.onkeypress = ()=>{
+//   let userEnteredValue = inputBox.value; //getting user entered value
+//   if(userEnteredValue.trim() != 0){ //if the user value isn't only spaces
+//     addBtn.classList.add("active"); //active the add button
+//   }else{
+//     addBtn.classList.remove("active"); //unactive the add button
+//   }
+// }
 inputBox.addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
