@@ -36,7 +36,7 @@ addBtn.onclick = ()=>{ //when user click on plus icon button
   listArray.push(userEnteredValue); //pushing or adding new value in array
   localStorage.setItem("New Todo", JSON.stringify(listArray)); //transforming js object into a json string
   showTasks(); //calling showTask function
-  addBtn.classList.remove("active"); //unactive the add button once the task added
+  // addBtn.classList.remove("active"); //unactive the add button once the task added
 }
 
 function showTasks(){
