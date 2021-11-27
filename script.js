@@ -7,19 +7,30 @@ const deleteAllBtn = document.querySelector(".footer button");
 // onkeyup event
 inputBox.onkeypress = ()=>{
   let userEnteredValue = inputBox.value; //getting user entered value
-  if(userEnteredValue.length >0){ //if the user value isn't only spaces
+
+  if(userEnteredValue.length >=0){ //if the user value isn't only spaces
     addBtn.classList.add("active"); //active the add button
   }else{
     addBtn.classList.remove("active"); //unactive the add button
   }
 }
+
 inputBox.addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
     // Cancel the default action, if needed
     event.preventDefault();
     // Trigger the button element with a click
-    addBtn.click();
+    let userEnteredValue = inputBox.value; //getting user entered value
+    if(userEnteredValue.length >0){ //if the user value isn't only spaces
+      addBtn.click(); //active the add button
+    }
+
+  }
+  if(event.keyCode===8){
+    if(inputBox.value==0){
+      addBtn.classList.remove("active");
+    }
   }
 });
 
